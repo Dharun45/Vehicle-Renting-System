@@ -1,16 +1,11 @@
-// RentWise - Vehicle Rental Management System (Core Java, OOP)
-// Single-file version for easy compilation & learning
+// RentWise: Vehicle Rental Management System 
 // Compile: javac RentWise.java
-// Run:     java RentWise
+// Run: java RentWise
 
 import java.util.*;
 
 public class RentVehicles {
-
-    /* ============================
-       DOMAIN MODELS (OOP CORE)
-       ============================ */
-
+    
     // Abstraction + Inheritance base class
     static abstract class Person {
         protected int id;
@@ -107,6 +102,7 @@ public class RentVehicles {
         private int days;
         private double totalCost;
 
+        
         public Rental(Customer customer, Vehicle vehicle, int days) {
             this.customer = customer;
             this.vehicle = vehicle;
@@ -183,9 +179,8 @@ public class RentVehicles {
         }
     }
 
-    /* ============================
-       APPLICATION UI (Console)
-       ============================ */
+   //    APPLICATION UI (Console)
+    
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -257,3 +252,4 @@ public class RentVehicles {
         }
     }
 }
+
