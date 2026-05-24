@@ -1,6 +1,6 @@
 // RentWise: Vehicle Rental Management System 
-// Compile: javac RentWise.java
-// Run: java RentWise
+// Compile: javac RentVehicles.java
+// Run: java RentVehicles
 
 import java.util.*;
 
