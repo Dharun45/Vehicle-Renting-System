@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Rentora" default="compile" basedir=".">
+    
+    <!-- Project properties -->
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="jar.dir" value="${build.dir}/jar"/>
+    <property name="lib.dir" value="lib"/>
+    
+    <!-- Initialize build directories -->
+    <target name="init">
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${jar.dir}"/>
+    </target>
+    
+    <!-- Compile Java source files -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false" debug="true">
+            <classpath>
+                <fileset dir="${lib.dir}" includes="*.jar" erroronmissingdir="false"/>
+            </classpath>
+        </javac>
+    </target>
+    
+    <!-- Create JAR file -->
+    <target name="jar" depends="compile">
+        <jar destfile="${jar.dir}/rentora.jar" basedir="${classes.dir}"/>
+    </target>
+    
+    <!-- Clean build artifacts -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+    
+</project>
