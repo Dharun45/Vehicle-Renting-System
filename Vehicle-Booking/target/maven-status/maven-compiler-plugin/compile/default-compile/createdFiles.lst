@@ -1,0 +1,3 @@
+com\dharun\rentoraapi\repository\BookingRepository.class
+com\dharun\rentoraapi\controller\BookingController.class
+com\dharun\rentoraapi\service\BookingService.class

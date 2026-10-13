@@ -1,0 +1,52 @@
+### Get all cars
+GET http://localhost:8080/cars/1
+
+### Add a new car
+POST http://localhost:8080/cars
+Content-Type: application/json
+
+{
+  "brand": "Toyota",
+  "model": "Innova",
+  "pricePerDay": 2500,
+  "available": true
+}
+
+### Add another car
+POST http://localhost:8080/cars
+Content-Type: application/json
+
+{
+  "brand": "Hyundai",
+  "model": "Creta",
+  "pricePerDay": 3000,
+  "available": false
+}
+### Get car by ID
+GET http://localhost:8080/cars/1
+
+### Delete car by ID
+DELETE http://localhost:8080/cars/1
+
+###Create a booking for car id 3
+POST http://localhost:8080/bookings
+Content-Type: application/json
+
+{
+  "startDate": "2026-08-15",
+  "endDate": "2026-08-20",
+  "car": { "id": 3 }
+}
+
+###Create a booking for car id 1
+POST http://localhost:8080/bookings
+Content-Type: application/json
+
+{
+  "startDate": "2026-08-12",
+  "endDate": "2026-08-19",
+  "car": { "id": 1 }
+}
+
+### Get all bookings
+GET http://localhost:8080/bookings
